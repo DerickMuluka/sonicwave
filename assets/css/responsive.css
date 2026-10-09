@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+  .topbar { flex-wrap: wrap; }
+  .search-bar { min-width: 100%; order: 3; }
+  .user-chip .name { display: none; }
+  .landing h1 { letter-spacing: -1px; }
+}

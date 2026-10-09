@@ -1,0 +1,45 @@
+.media-viewer {
+  background: #000; border-radius: 16px; overflow: hidden;
+  position: relative; aspect-ratio: 16/9;
+  border: 1px solid var(--border);
+}
+.media-viewer iframe, .media-viewer video {
+  width: 100%; height: 100%; border: none; display: block;
+}
+.media-viewer audio { width: 100%; padding: 20px; background: var(--bg-1); }
+
+.media-controls {
+  display: flex; gap: 10px; padding: 14px 18px;
+  background: var(--bg-1); border: 1px solid var(--border);
+  border-radius: 12px; margin-top: 14px; flex-wrap: wrap;
+  align-items: center;
+}
+.media-controls .spacer { flex: 1; }
+
+.platform-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px; margin-top: 14px;
+}
+.platform-tile {
+  padding: 12px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600;
+  transition: all 0.18s;
+}
+.platform-tile .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* Resolution controls */
+.res-controls {
+  display: flex; gap: 6px; align-items: center;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 4px;
+}
+.res-controls button {
+  padding: 6px 12px; border-radius: 7px;
+  font-size: 12px; font-weight: 600; color: var(--muted);
+  transition: all 0.15s;
+}
+.res-controls button.active, .res-controls button:hover {
+  background: var(--grad-main); color: #fff;
+}
